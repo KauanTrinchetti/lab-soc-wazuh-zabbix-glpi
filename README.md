@@ -284,11 +284,11 @@ lab-soc-wazuh-zabbix-glpi/
 
 | Fase | Tema | Relatório |
 |---:|---|---|
-| **1** | Host, GLPI e API REST | [`docs/relatorio-fase1.pdf`](docs/relatorio-fase1.pdf) |
-| **2** | Zabbix, agentes e triggers | [`docs/relatorio-fase2.pdf`](docs/relatorio-fase2.pdf) |
-| **3** | Wazuh, FIM e regra de correlação | [`docs/relatorio-fase3.pdf`](docs/relatorio-fase3.pdf) |
-| **4** | Integração das três ferramentas | [`docs/relatorio-fase4.pdf`](docs/relatorio-fase4.pdf) |
-| **5** | Dashboards e validação por simulação | [`docs/relatorio-fase5.pdf`](docs/relatorio-fase5.pdf) |
+| **1** | Host, GLPI e API REST | [`docs/relatorio-tecnico-fase1.pdf`](docs/relatorio-tecnico-fase1.pdf) |
+| **2** | Zabbix, agentes e triggers | [`docs/relatorio-tecnico-fase2.pdf`](docs/relatorio-tecnico-fase2.pdf) |
+| **3** | Wazuh, FIM e regra de correlação | [`docs/relatorio-tecnico-fase3.pdf`](docs/relatorio-tecnico-fase3.pdf) |
+| **4** | Integração das três ferramentas | [`docs/relatorio-tecnico-fase4.pdf`](docs/relatorio-tecnico-fase4.pdf) |
+| **5** | Dashboards e validação por simulação | [`docs/relatorio-tecnico-fase5.pdf`](docs/relatorio-tecnico-fase5.pdf) |
 
 ---
 
