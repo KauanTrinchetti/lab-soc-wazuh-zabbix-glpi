@@ -1,0 +1,35 @@
+name: glpi
+
+services:
+  glpi:
+    image: glpi/glpi:10.0.26
+    container_name: glpi
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      - db
+    ports:
+      - "8081:80"
+    volumes:
+      - glpi_data:/var/glpi
+      - glpi_marketplace:/var/www/glpi/marketplace
+
+  db:
+    image: mysql:8.0
+    container_name: glpi-db
+    restart: unless-stopped
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: ${GLPI_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${GLPI_DB_NAME}
+      MYSQL_USER: ${GLPI_DB_USER}
+      MYSQL_PASSWORD: ${GLPI_DB_PASSWORD}
+    volumes:
+      - glpi_db:/var/lib/mysql
+
+volumes:
+  glpi_data:
+  glpi_marketplace:
+  glpi_db:
