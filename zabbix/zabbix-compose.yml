@@ -1,0 +1,58 @@
+name: zabbix
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: zabbix-mysql
+    restart: unless-stopped
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_bin
+      - --log_bin_trust_function_creators=1
+    environment:
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: SUA_SENHA_AQUI
+      MYSQL_ROOT_PASSWORD: SUA_SENHA_AQUI
+    volumes:
+      - zbx_db:/var/lib/mysql
+
+  zabbix-server:
+    image: zabbix/zabbix-server-mysql:alpine-7.0-latest
+    container_name: zabbix-server
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    environment:
+      DB_SERVER_HOST: mysql
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: SUA_SENHA_AQUI
+      ZBX_CACHESIZE: 64M
+      ZBX_STARTPOLLERS: 5
+    ports:
+      - "10051:10051"
+    volumes:
+      # scripts de alerta (usado se voce optar pelo media type "Script" em vez de webhook)
+      - ./alertscripts:/usr/lib/zabbix/alertscripts:ro
+
+  zabbix-web:
+    image: zabbix/zabbix-web-nginx-mysql:alpine-7.0-latest
+    container_name: zabbix-web
+    restart: unless-stopped
+    depends_on:
+      - mysql
+      - zabbix-server
+    environment:
+      ZBX_SERVER_HOST: zabbix-server
+      ZBX_SERVER_PORT: 10051
+      DB_SERVER_HOST: mysql
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: SUA_SENHA_AQUI
+      PHP_TZ: America/Sao_Paulo
+    ports:
+      - "8080:8080"
+
+volumes:
+  zbx_db:
