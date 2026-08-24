@@ -22,34 +22,6 @@ Este projeto vai além da detecção e busca fechar o ciclo operacional de um in
 - 🎫 **GLPI** recebe eventos de segurança e infraestrutura como chamados, com categoria e urgência definidas na origem.
 - 👨‍💻 **Operador** analisa, resolve o incidente e registra a ação preventiva.
 
-### Fluxo geral
-
-```text
-                 ┌─────────────┐
-                 │  FIREWALL   │
-                 └──────┬──────┘
-                        │
-                 ┌──────▼──────┐
-                 │    REDE     │
-                 │  / vSwitch  │
-                 └──────┬──────┘
-                        │
-        ┌───────────────┼────────────────┐
-        │               │                │
-   ┌────▼────┐     ┌────▼────┐     ┌────▼────┐
-   │  Wazuh  │     │ Zabbix  │     │  GLPI   │
-   │ SIEM/XDR│     │Monitor. │     │ ITSM    │
-   └────┬────┘     └────┬────┘     └─────────┘
-        │               │
-   ┌────┴────┐     ┌────▼────┐
-   │         │     │         │
-┌──▼─────┐ ┌─▼──────┐ ┌──────▼──┐
-│Windows │ │ Ubuntu │ │ Service  │
-│ Agent  │ │ Agent  │ │   Desk   │
-└────────┘ └────────┘ └─────────┘
-```
-
----
 
 ## 🧱 Stack
 
@@ -61,40 +33,7 @@ Este projeto vai além da detecção e busca fechar o ciclo operacional de um in
 | **Docker** | — | Containerização dos serviços |
 | **Ubuntu Server** | 24.04 | Base do laboratório |
 
----
 
-## 🏗️ Arquitetura
-
-O ambiente foi projetado para funcionar com poucos recursos, mantendo uma separação lógica entre segurança, monitoramento e gestão de incidentes.
-
-```text
-                         ┌──────────────┐
-                         │   FIREWALL   │
-                         └──────┬───────┘
-                                │
-                         ┌──────▼───────┐
-                         │ SWITCH/VLAN  │
-                         └──────┬───────┘
-                                │
-          ┌─────────────────────┼─────────────────────┐
-          │                     │                     │
-     ┌────▼─────┐          ┌────▼─────┐          ┌────▼─────┐
-     │  WAZUH   │          │  ZABBIX  │          │   GLPI   │
-     │ SIEM/XDR │          │ MONITOR. │          │ SERVICE   │
-     │          │          │          │          │   DESK    │
-     └────┬─────┘          └──────────┘          └──────────┘
-          │
-      ┌───┴────┐
-      │        │
- ┌────▼───┐ ┌──▼──────┐
- │Windows │ │ Ubuntu  │
- │ Agent  │ │ Agent   │
- └────────┘ └─────────┘
-```
-
-> A arquitetura utiliza **FIREWALL** de forma genérica, permitindo que o laboratório seja adaptado para diferentes soluções de firewall.
-
----
 
 ## 🔄 Fluxo de integração
 
