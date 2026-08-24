@@ -214,7 +214,7 @@ lab-soc-wazuh-zabbix-glpi/
 
 ![Chamados GLPI](docs/images/glpi-tickets.png)
 
-> Caso os nomes dos arquivos das capturas sejam diferentes, ajuste os caminhos acima conforme a estrutura real do diretório `docs/images/`.
+
 
 ---
 
