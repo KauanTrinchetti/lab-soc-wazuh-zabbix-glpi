@@ -16,10 +16,6 @@ O laboratório roda inteiramente em uma VM com **5 GB de RAM**, utilizando ferra
 
 ## 🎯 A ideia
 
-A maioria dos labs de SIEM para em:
-
-> "Instalei o Wazuh, olha o dashboard."
-
 Este projeto vai além da detecção e busca fechar o ciclo operacional de um incidente:
 
 - 🛡️ **Wazuh** detecta eventos, correlaciona alertas e executa resposta ativa, incluindo bloqueio de IP no firewall.
