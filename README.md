@@ -1,4 +1,4 @@
-   ![Lab de SOC — Wazuh + Zabbix + GLPI](docs/README-banner.png)
+![Lab de SOC — Wazuh + Zabbix + GLPI](docs/README-banner.png)
 # Lab de SOC — Wazuh + Zabbix + GLPI
 
 Laboratório de operações de segurança que integra três ferramentas de código aberto em um fluxo único: **detecção → resposta → registro**. Um alerta de segurança ou de infraestrutura pode se transformar automaticamente em um chamado classificado no service desk.
