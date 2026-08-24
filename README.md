@@ -335,3 +335,9 @@ O objetivo é reproduzir, em uma infraestrutura pequena e de baixo custo, um flu
 ⭐ Se este projeto foi útil, considere deixar uma estrela no repositório.
 
 **GitHub:** [KauanTrinchetti/lab-soc-wazuh-zabbix-glpi](https://github.com/KauanTrinchetti/lab-soc-wazuh-zabbix-glpi)
+
+![Wazuh](https://img.shields.io/badge/Wazuh-4.14.7-38BDF8?style=for-the-badge&logo=wazuh&logoColor=white)
+![Zabbix](https://img.shields.io/badge/Zabbix-7.0_LTS-D40000?style=for-the-badge&logo=zabbix&logoColor=white)
+![GLPI](https://img.shields.io/badge/GLPI-10.0.26-22C55E?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-Ubuntu_24.04-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red?style=for-the-badge)
