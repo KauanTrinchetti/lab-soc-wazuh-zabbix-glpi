@@ -1,0 +1,15 @@
+<!-- Local rules -->
+
+<group name="lab,custom,">
+
+  <!-- Brute force SSH: 5 falhas do mesmo IP em 2 minutos -->
+  <rule id="100011" level="12" frequency="5" timeframe="120">
+    <if_matched_sid>5710</if_matched_sid>
+    <same_source_ip />
+    <description>LAB: possivel brute force SSH - 5 falhas do mesmo IP em 2min</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+
+</group>

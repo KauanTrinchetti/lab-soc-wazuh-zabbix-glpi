@@ -1,0 +1,18 @@
+services:
+
+  wazuh.indexer:
+    environment:
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m"
+    mem_limit: 1400m
+
+  wazuh.manager:
+    mem_limit: 768m
+    volumes:
+      - ./config/local_rules.xml:/var/ossec/etc/rules/local_rules.xml
+      - ./config/integrations/custom-glpi:/var/ossec/integrations/custom-glpi
+      - ./config/integrations/custom-glpi.py:/var/ossec/integrations/custom-glpi.py
+
+  wazuh.dashboard:
+    environment:
+      - "NODE_OPTIONS=--max-old-space-size=384"
+    mem_limit: 640m

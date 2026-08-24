@@ -1,0 +1,2 @@
+#!/bin/sh
+/var/ossec/framework/python/bin/python3 /var/ossec/integrations/custom-glpi.py "$@"
