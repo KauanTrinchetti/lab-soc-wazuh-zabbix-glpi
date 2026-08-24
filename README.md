@@ -293,7 +293,7 @@ Projeto de estudo desenvolvido por **Kauan Trinchetti**, com foco em **SOC, Blue
 
 O objetivo é reproduzir, em uma infraestrutura pequena e de baixo custo, um fluxo semelhante ao encontrado em ambientes corporativos:
 
-!(docs/images/fluxo.png)
+![](docs/images/fluxo.png)
 
 ---
 
