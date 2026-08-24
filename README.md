@@ -3,6 +3,7 @@
 Laboratório de operações de segurança que integra três ferramentas de código aberto em um fluxo único: **detecção → resposta → registro**. Um alerta de segurança ou de infraestrutura pode se transformar automaticamente em um chamado classificado no service desk.
 
 O laboratório roda inteiramente em uma VM com **5 GB de RAM**, utilizando ferramentas sem custo de licenciamento.
+
 ![Wazuh](https://img.shields.io/badge/Wazuh-4.14.7-38BDF8?style=for-the-badge&logo=wazuh&logoColor=white)
 ![Zabbix](https://img.shields.io/badge/Zabbix-7.0_LTS-D40000?style=for-the-badge&logo=zabbix&logoColor=white)
 ![GLPI](https://img.shields.io/badge/GLPI-10.0.26-22C55E?style=for-the-badge)
