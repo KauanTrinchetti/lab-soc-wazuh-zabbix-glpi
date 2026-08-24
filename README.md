@@ -293,44 +293,7 @@ Projeto de estudo desenvolvido por **Kauan Trinchetti**, com foco em **SOC, Blue
 
 O objetivo é reproduzir, em uma infraestrutura pequena e de baixo custo, um fluxo semelhante ao encontrado em ambientes corporativos:
 
-```text
-                    DETECÇÃO
-                       │
-                       ▼
-             ┌──────────────────┐
-             │      WAZUH       │
-             │ SIEM / XDR / FIM │
-             └────────┬─────────┘
-                      │
-                      ▼
-                   RESPOSTA
-                      │
-                      ▼
-             ┌──────────────────┐
-             │     FIREWALL     │
-             └────────┬─────────┘
-                      │
-                      ▼
-                  REGISTRO
-                      │
-                      ▼
-             ┌──────────────────┐
-             │       GLPI       │
-             │   SERVICE DESK   │
-             └────────┬─────────┘
-                      │
-                      ▼
-                   ANÁLISE
-                      │
-                      ▼
-             ┌──────────────────┐
-             │     OPERADOR     │
-             │  RESOLVE / AGE   │
-             └──────────────────┘
-
-        ZABBIX ───────► GLPI
-        MONITORAMENTO    INCIDENTE
-```
+!(docs/images/fluxo.png)
 
 ---
 
